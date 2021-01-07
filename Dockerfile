@@ -10,7 +10,7 @@ RUN apk update \
  && apk add --no-cache nodejs=${NODE_VERSION} npm=${NODE_VERSION} \
  && apk --no-cache add curl
 
-ENV MOUNTEBANK_VERSION=2.3.2
+ENV MOUNTEBANK_VERSION=2.4.0
 
 RUN npm install -g mountebank@${MOUNTEBANK_VERSION} --production \
  && npm cache clean --force 2>/dev/null \
